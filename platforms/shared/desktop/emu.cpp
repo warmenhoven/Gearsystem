@@ -393,7 +393,7 @@ void emu_update(void)
             (!emu_link_cable_is_active() ||
                 !emu_link_cable_is_cable_connected() ||
                 emu_link_cable_is_pacing_peer());
-        sound_queue_write(audio_buffer, sampleCount, sync_audio, emu_audio_rate_control, emu_audio_ratio);
+        sound_queue_write(audio_buffer, sampleCount, sync_audio, emu_audio_rate_control, emu_audio_ratio, !emu_audio_sync);
     }
     else if (gearsystem->IsPaused())
     {
