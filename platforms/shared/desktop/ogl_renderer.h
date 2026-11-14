@@ -42,6 +42,7 @@ struct OglRendererScreenGeometry
 {
     int physical_width;
     int physical_height;
+    float framebuffer_scale;
 };
 
 EXTERN bool ogl_renderer_init(void);
